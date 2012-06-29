@@ -1,0 +1,19 @@
+# Script
+# Cria Classe Grupo
+rails generate scaffold Grupo descricao:string multa:float
+
+# Cria Classe Usuario
+rails generate scaffold Usuario nome:string endereco:string telefone:string matricula:integer grupo:references
+
+# Cria Classe Editora
+rails generate scaffold Editora razao_social:string cnpj:string
+
+# Cria Classe Categoria
+rails generate scaffold CategoriaLivro descricao:string
+
+# Cria Classe Livro
+rails generate scaffold Livro titulo:string subtitulo:string autor:string quantidade:integer prazo_entrega:integer isbn:string data_lancamento:date edicao:integer editora:references categorialivro:references
+
+# Cria Classe locacao de Relacionamento N x N - Tabela Livros com Tabela Usuarios
+# rails generate scaffold Locacao data_locacao:datetime data_devolucao:datetime data_prevista:date multa:float livro:references usuario:references
+
