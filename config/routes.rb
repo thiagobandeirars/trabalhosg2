@@ -1,4 +1,10 @@
 Trabalhosg2::Application.routes.draw do
+  resources :livros
+
+  resources :categorialivros
+
+  resources :editoras
+
   resources :usuarios
 
   resources :grupos

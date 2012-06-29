@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  razao_social: MyString
+  cnpj: MyString
+
+two:
+  razao_social: MyString
+  cnpj: MyString

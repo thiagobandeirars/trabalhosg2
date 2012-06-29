@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  titulo: MyString
+  subtitulo: MyString
+  autor: MyString
+  quantidade: 1
+  prazo_entrega: 1
+  isbn: MyString
+  data_lancamento: 2012-06-29
+  edicao: 1
+  editora: 
+  categorialivro: 
+
+two:
+  titulo: MyString
+  subtitulo: MyString
+  autor: MyString
+  quantidade: 1
+  prazo_entrega: 1
+  isbn: MyString
+  data_lancamento: 2012-06-29
+  edicao: 1
+  editora: 
+  categorialivro: 

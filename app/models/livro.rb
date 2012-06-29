@@ -1,0 +1,5 @@
+class Livro < ActiveRecord::Base
+  belongs_to :editora
+  belongs_to :categorialivro
+  attr_accessible :autor, :data_lancamento, :edicao, :isbn, :prazo_entrega, :quantidade, :subtitulo, :titulo, :editora_id, :categorialivro_id
+end

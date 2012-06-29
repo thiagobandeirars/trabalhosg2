@@ -1,0 +1,57 @@
+<%= form_for(@livro) do |f| %>
+  <% if @livro.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@livro.errors.count, "error") %> prohibited this livro from being saved:</h2>
+
+      <ul>
+      <% @livro.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :titulo %><br />
+    <%= f.text_field :titulo %>
+  </div>
+  <div class="field">
+    <%= f.label :subtitulo %><br />
+    <%= f.text_field :subtitulo %>
+  </div>
+  <div class="field">
+    <%= f.label :autor %><br />
+    <%= f.text_field :autor %>
+  </div>
+  <div class="field">
+    <%= f.label :quantidade %><br />
+    <%= f.number_field :quantidade %>
+  </div>
+  <div class="field">
+    <%= f.label :prazo_entrega %><br />
+    <%= f.number_field :prazo_entrega %>
+  </div>
+  <div class="field">
+    <%= f.label :isbn %><br />
+    <%= f.text_field :isbn %>
+  </div>
+  <div class="field">
+    <%= f.label :data_lancamento %><br />
+    <%= f.date_select :data_lancamento %>
+  </div>
+  <div class="field">
+    <%= f.label :edicao %><br />
+    <%= f.number_field :edicao %>
+  </div>
+  <div class="field">
+    <%= f.label :editora %><br />
+    <%= f.text_field :editora %>
+  </div>
+  <div class="field">
+    <%= f.label :categorialivro %><br />
+    <%= f.text_field :categorialivro %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

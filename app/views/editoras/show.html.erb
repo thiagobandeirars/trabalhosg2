@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Razao social:</b>
+  <%= @editora.razao_social %>
+</p>
+
+<p>
+  <b>Cnpj:</b>
+  <%= @editora.cnpj %>
+</p>
+
+
+<%= link_to 'Edit', edit_editora_path(@editora) %> |
+<%= link_to 'Back', editoras_path %>
