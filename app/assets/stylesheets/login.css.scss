@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.login-box {
+  margin: 0 auto;
+  width: 333px;
+  height: 352px;
+  padding: 58px 76px 0 76px;
+  color: #ebebeb;
+  font: 12px Arial, Helvetica, sans-serif;
+  background: url(login-box-backg.png) no-repeat left top;
+}
+
+.login-box img {
+  border: none;
+}
+
+.login-box h2 {
+  padding: 0;
+  margin: 0;
+  color: #ebebeb;
+  font: bold 29px "Calibri" , Arial;
+  margin-top: 20px;
+  text-align:center;
+}
+
+.login-box-fields {
+  height: 120px;
+  margin-top: 40px;
+}
+
+.login-box-name {
+  float: left;
+  display: inline;
+  width: 90px;
+  text-align: right;
+  padding: 14px 10px 0 0;
+  margin: 0 0 7px 0;
+}
+
+.login-box-field {
+  float: left;
+  display: inline;
+  width: 230px;
+  margin: 0;
+  margin: 0 0 7px 0;
+}
+
+
+.form-login {
+  width: 205px;
+  padding: 10px 4px 6px 3px;
+  border: 1px solid #0d2c52;
+  background-color: #1e4f8a;
+  font-size: 16px;
+  color: #ebebeb;
+}
+.login-box-options {
+  clear: both;
+  padding-left: 87px;
+  font-size: 11px;
+}
+
+.login-box-options a {
+  color: #ebebeb;
+  font-size: 11px;
+}
+.login-button {
+  text-align: center;
+}
+.message {
+  font-size: 16px;
+}
+
+.buttonAlterarSenha {
+  padding: 10px;
+  background: #518ee1;
+  border-color: #518ee1;
+  color: #FFF;
+  font-weight: bold;
+  border-radius: 8px;
+  box-shadow: 1px 1px 0px 0px #000;
+  -moz-box-shadow: 1px 1px 0px 0px #000;
+  -webkit-box-shadow: 1px 1px 0px 0px #000;
+  margin-top: 8px;
+}
+
