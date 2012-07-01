@@ -1,12 +1,30 @@
-<h1>Login</h1>
-<%= form_tag sessions_path do %>
-  <div class="field">
-    <%= label_tag :matricula %>
-    <%= text_field_tag :matricula, params[:matricula] %>
+<html>
+<head>
+  <title>Biblioteca Virtual - Login</title>
+  <%= stylesheet_link_tag "login", :media => "all" %>
+</head>
+<body>
+  <%= form_tag sessions_path do %>  
+  <div class="login-box">
+  <h2>Biblioteca Virtual</h2>  
+    <div class="login-box-fields">
+      <div class="login-box-name">
+        <%= label_tag :matricula %>
+      </div>
+      <div class="login-box-field">
+        <%= text_field_tag :matricula, params[:matricula], :class => "form-login" %>
+      </div>
+      <div class="login-box-name">
+        <%= label_tag :senha %>
+      </div>
+      <div class="login-box-field">
+        <%= password_field_tag :senha, nil, :class => "form-login" %>
+      </div>
+    </div>
+    <div class="login-button">
+      <%= image_submit_tag("login-btn.png") %>
+    </div>
   </div>
-  <div class="field">
-    <%= label_tag :senha %>
-    <%= password_field_tag :senha %>
-  </div>
-  <div class="actions"><%= submit_tag "Login" %></div>
-<% end %>
+  <% end %>
+</body>
+</html>
