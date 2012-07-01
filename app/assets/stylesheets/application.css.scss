@@ -1,0 +1,203 @@
+body {
+	font-family: Verdana, Tahoma;
+  font-size: 12px;
+	margin: 0;
+	padding: 0;
+	background: #DDD;
+}
+#geral {
+	width: 978px;
+	height: auto;
+	margin: 0 auto;
+	background: #fff;
+	margin-top: 5px;
+	border: 1px solid #888;
+	-moz-box-shadow: 10px 10px 5px #888;
+	-webkit-box-shadow: 10px 10px 5px #888;
+	box-shadow: 10px 10px 5px #888;
+}
+#cabecalho {
+	padding: 10px;
+}
+#cabecalho #titulo {
+	font-weight: bolder;
+	font-size: 22px;
+	margin-bottom: 10px;
+}
+#cabecalho #usuario {
+  font-size: 12px !important;
+}
+#cabecalho #logout{
+	float:right;
+}
+#cabecalho #logout a, #cabecalho #logout a:visited {  
+  color: blue;
+  text-decoration: none;
+}
+
+#conteudo {
+	min-height: 400px;
+	padding: 10px;
+	padding-top: 0;
+}
+/*  HOME INDEX  */
+#conteudo .icones {
+	padding: 10px;
+	margin:0 auto;
+	
+}
+#conteudo .icones img {
+	padding: 10px;
+}
+/* Listagens  */
+
+#conteudo h1 {
+	font-size: 16px;
+	padding: 10px;
+	padding-left: 0;
+	border-bottom:2px solid #000;
+	padding-right: 0;
+}
+#conteudo h1 a {
+	text-decoration: none;
+	font-size: 12px;
+	font-weight: normal;
+	background: #ececec;
+	float: right;
+	color: #000;
+	padding: 5px 10px 5px 10px;
+	border:1px solid #e1e1e1;
+	margin-left: 10px;
+}
+#conteudo h1 a:hover {
+	background: #DDD;
+}
+
+#conteudo table {
+	width:100%;
+}
+#conteudo table tr {
+	background: #ececec;
+	height: 26px;
+}
+#conteudo table tr td {
+	background: #EDEDED;
+	height: 26px;
+	vertical-align: middle;
+	text-align: left;
+	padding-left: 13px;
+	font-size: 12px;
+	color: #333;
+}
+#conteudo table tr:hover td {
+	background: #DDD;
+}
+#conteudo table tr th {
+	background: #FFF;
+	text-align: left;
+	font-size: 12px;
+	text-align: left;
+	padding-left: 13px;
+	padding-bottom: 12px;
+}
+#conteudo table tr td.botoes {
+	width: 15px;
+	padding:0;
+}
+#conteudo table tr td.botoes img {
+	margin-top:2px;
+	margin-right:5px;
+	margin-left: 5px;
+	width:16px;
+	height:16px;
+}
+/*  FORMULARIOS e SHOW  */
+form div.form {
+	float: left;
+	width: 400px;
+}
+div.field {
+	width: 100%;
+	margin-bottom: 15px;
+	height:25px;
+	clear:both;
+}
+div.field label, div.field div.detail {
+	width: 80px;
+	text-align: right;
+	display: block;
+	float: left;
+}
+div.field label {
+	font-weight: bold;
+	font-size:11px;
+  padding: 4px;
+}
+div.field div.detail {
+	text-align: left;
+	width: 80%;
+  padding-left:10px;
+  padding-top: 3px;
+}
+div.field input, div.field select {
+	/*border:1px solid #000;*/
+	padding-left: 4px;
+	height: 23px;
+	border: 1px solid #888;
+	border-radius: 5px;
+	-moz-box-shadow: 2px 2px 1px #888;
+	-webkit-box-shadow: 2px 2px 1px #888;
+	box-shadow: 1px 1px 1px #888;
+}
+div.actions {
+	clear: both;
+	width: 100%;
+	text-align: right;
+}
+div.actions input {
+	padding: 5px;
+}
+div.actions input:hover {
+	cursor: pointer;
+}
+
+div.form div.field label {
+  padding-top: 6px;
+}
+div.form.livro div.field label, div.form.livro div.field div.detail {
+  width: 120px;
+}
+
+/* MENSAGENS  */
+#notice {
+ 	color: green; 
+	font-weight:bold;
+}
+.field_with_errors input, .field_with_errors select {
+	background: #FFC1B2;
+}
+#error_explanation {
+  width: 350px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  float: right;
+  width: 400px;
+}
+#error_explanation h2 {
+	text-align: left;
+	font-weight: bold;
+	padding: 5px 5px 5px 15px;
+	font-size: 12px;
+	margin: -7px;
+	margin-bottom: 0px;
+	background-color: #c00;
+	color: #000; 
+}
+#error_explanation ul li {
+	font-size: 12px;
+	list-style: square;
+} 
+
