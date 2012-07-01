@@ -37,7 +37,7 @@
 .cssmenu .active a, .cssmenu li:hover > a {
   background: #666 url(overlay.png) repeat-x 0 -40px; 
   color: #444; 
-  border-top: solid 1px #f8f8f8; 
+  border-top: solid 0px #f8f8f8; 
   -webkit-box-shadow: 0 1px 1px rgba(0,0,0, .2); 
   -moz-box-shadow: 0 1px 1px rgba(0,0,0, .2); 
   box-shadow: 0 1px 1px rgba(0,0,0, .2); 
