@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120629033333) do
+ActiveRecord::Schema.define(:version => 20120630152337) do
 
   create_table "categorialivros", :force => true do |t|
     t.string   "descricao"
@@ -58,6 +58,7 @@ ActiveRecord::Schema.define(:version => 20120629033333) do
     t.integer  "grupo_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "senha"
   end
 
   add_index "usuarios", ["grupo_id"], :name => "index_usuarios_on_grupo_id"
