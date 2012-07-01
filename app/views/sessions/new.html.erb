@@ -1,0 +1,12 @@
+<h1>Login</h1>
+<%= form_tag sessions_path do %>
+  <div class="field">
+    <%= label_tag :matricula %>
+    <%= text_field_tag :matricula, params[:matricula] %>
+  </div>
+  <div class="field">
+    <%= label_tag :senha %>
+    <%= password_field_tag :senha %>
+  </div>
+  <div class="actions"><%= submit_tag "Login" %></div>
+<% end %>

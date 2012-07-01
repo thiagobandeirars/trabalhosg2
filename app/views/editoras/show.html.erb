@@ -1,15 +1,16 @@
+<h1>Detalhes da Editora
+<%= link_to 'Editar', edit_editora_path(@editora) %>
+<%= link_to 'Voltar', editoras_path %>
+</h1>
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Razao social:</b>
-  <%= @editora.razao_social %>
-</p>
+<div class="field">
+	<label for="descricao">Razão Social</label>
+	<div class="detail"><%= @editora.razao_social %></div>
+</div>
 
-<p>
-  <b>Cnpj:</b>
-  <%= @editora.cnpj %>
-</p>
+<div class="field">
+	<label for="descricao">CNPJ</label>
+	<div class="detail"><%= @editora.cnpj %></div>
+</div>
 
-
-<%= link_to 'Edit', edit_editora_path(@editora) %> |
-<%= link_to 'Back', editoras_path %>

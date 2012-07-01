@@ -1,8 +1,10 @@
-<h1>Listing grupos</h1>
+<h1>Lista de Grupos
+<%= link_to 'Novo grupo', new_grupo_path %>
+</h1>
 
 <table>
   <tr>
-    <th>Descricao</th>
+    <th>Descrição</th>
     <th>Multa</th>
     <th></th>
     <th></th>
@@ -13,13 +15,12 @@
   <tr>
     <td><%= grupo.descricao %></td>
     <td><%= grupo.multa %></td>
-    <td><%= link_to 'Show', grupo %></td>
-    <td><%= link_to 'Edit', edit_grupo_path(grupo) %></td>
-    <td><%= link_to 'Destroy', grupo, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td class="botoes"><%= link_to image_tag("show.png"), grupo %></td>
+    <td class="botoes"><%= link_to image_tag("edit.png"), edit_grupo_path(grupo) %></td>
+    <td class="botoes"><%= link_to image_tag("delete.png"), grupo, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Grupo', new_grupo_path %>

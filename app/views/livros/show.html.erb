@@ -1,55 +1,56 @@
+<h1>Detalhes do Livro
+<%= link_to 'Voltar', livros_path %>
+<%= link_to 'Editar', edit_livro_path(@livro) %></h1>
+
 <p id="notice"><%= notice %></p>
+<div class="form livro">
+  <div class="field">
+	  <label for="titulo">Título</label>
+    <div class="detail"><%= @livro.titulo %></div>
+  </div>
 
-<p>
-  <b>Titulo:</b>
-  <%= @livro.titulo %>
-</p>
+  <div class="field">
+	  <label for="subtitulo">Subtítulo</label>
+	  <div class="detail"><%= @livro.subtitulo %></div>
+  </div>
 
-<p>
-  <b>Subtitulo:</b>
-  <%= @livro.subtitulo %>
-</p>
+  <div class="field">
+	  <label for="autor">Autor</label>
+	  <div class="detail"><%= @livro.autor %></div>
+  </div>
 
-<p>
-  <b>Autor:</b>
-  <%= @livro.autor %>
-</p>
+  <div class="field">
+	  <label for="quantidade">Quantidade</label>
+	  <div class="detail"><%= @livro.quantidade %></div>
+  </div>
 
-<p>
-  <b>Quantidade:</b>
-  <%= @livro.quantidade %>
-</p>
+  <div class="field">
+	  <label for="prazo_entrega">Prazo Entrega</label>
+	  <div class="detail"><%= @livro.prazo_entrega %></div>
+  </div>
 
-<p>
-  <b>Prazo entrega:</b>
-  <%= @livro.prazo_entrega %>
-</p>
+  <div class="field">
+	  <label for="isbn">ISBN</label>
+	  <div class="detail"><%= @livro.isbn %></div>
+  </div>
 
-<p>
-  <b>Isbn:</b>
-  <%= @livro.isbn %>
-</p>
+  <div class="field">
+	  <label for="data_lancamento">Data Lançamento</label>
+	  <div class="detail"><%= @livro.data_lancamento.strftime("%d/%m/%Y") %></div>
+  </div>
 
-<p>
-  <b>Data lancamento:</b>
-  <%= @livro.data_lancamento %>
-</p>
+  <div class="field">
+	  <label for="edicao">Edição</label>
+	  <div class="detail"><%= @livro.edicao %></div>
+  </div>
 
-<p>
-  <b>Edicao:</b>
-  <%= @livro.edicao %>
-</p>
+  <div class="field">
+	  <label for="editora">Editora</label>
+	  <div class="detail"><%= @livro.editora.razao_social %></div>
+  </div>
 
-<p>
-  <b>Editora:</b>
-  <%= @livro.editora %>
-</p>
-
-<p>
-  <b>Categorialivro:</b>
-  <%= @livro.categorialivro %>
-</p>
-
-
-<%= link_to 'Edit', edit_livro_path(@livro) %> |
-<%= link_to 'Back', livros_path %>
+  <div class="field">
+	  <label for="categoria">Categoria</label>
+	  <div class="detail"><%= @livro.categorialivro.descricao %></div>
+  </div>
+</div>

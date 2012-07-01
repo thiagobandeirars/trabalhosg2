@@ -1,30 +1,31 @@
+<h1>Detalhes do Usuário
+<%= link_to 'Editar', edit_usuario_path(@usuario) %>
+<%= link_to 'Voltar', usuarios_path %>
+</h1>
+
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Nome:</b>
-  <%= @usuario.nome %>
-</p>
+<div class="field">
+	<label for="descricao">Nome</label>
+	<div class="detail"><%= @usuario.nome %></div>
+</div>
 
-<p>
-  <b>Endereco:</b>
-  <%= @usuario.endereco %>
-</p>
+<div class="field">
+	<label for="descricao">Endereço</label>
+	<div class="detail"><%= @usuario.endereco %></div>
+</div>
 
-<p>
-  <b>Telefone:</b>
-  <%= @usuario.telefone %>
-</p>
+<div class="field">
+	<label for="descricao">Telefone</label>
+	<div class="detail"><%= @usuario.telefone %></div>
+</div>
 
-<p>
-  <b>Matricula:</b>
-  <%= @usuario.matricula %>
-</p>
+<div class="field">
+	<label for="descricao">Matrícula</label>
+	<div class="detail"><%= @usuario.matricula %></div>
+</div>
 
-<p>
-  <b>Grupo:</b>
-  <%= @usuario.grupo.descricao %>
-</p>
-
-
-<%= link_to 'Edit', edit_usuario_path(@usuario) %> |
-<%= link_to 'Back', usuarios_path %>
+<div class="field">
+	<label for="descricao">Grupo</label>
+	<div class="detail"><%= @usuario.grupo.descricao %></div>
+</div>

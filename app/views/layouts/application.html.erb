@@ -3,12 +3,35 @@
 <head>
   <title>Trabalhosg2</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag    "menu", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<div id="geral">
+		<div id="cabecalho">
+			<div id="logout">
+				<%= link_to 'Sair', logout_path %>
+			</div>
+			<div id="titulo">Biblioteca Virtual</div>
+			<div id="usuario">Seja bem-vindo <%= @current_user.nome %></div>
+		</div>
 
-<%= yield %>
+		<div class='cssmenu'>
+		<ul>
+		   <li><%= link_to 'Home', index_path %></li>
+		   <li><%= link_to 'Grupos', grupos_path %></li>
+                   <li><%= link_to 'Usuarios', usuarios_path %></li>
+                   <li><%= link_to 'Editoras', editoras_path %></li>
+                   <li><%= link_to 'Categorias', categorialivros_path %></li>
+                   <li><%= link_to 'Livros', livros_path %></li>
 
+		</ul>
+		</div>
+	
+		<div id="conteudo">
+			<%= yield %>
+		</div>
+	</div>
 </body>
 </html>

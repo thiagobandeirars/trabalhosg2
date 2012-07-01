@@ -1,3 +1,5 @@
+<%= stylesheet_link_tag    "livros", :media => "all" %>
+
 <%= form_for(@livro) do |f| %>
   <% if @livro.errors.any? %>
     <div id="error_explanation">
@@ -11,47 +13,49 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :titulo %><br />
-    <%= f.text_field :titulo %>
-  </div>
-  <div class="field">
-    <%= f.label :subtitulo %><br />
-    <%= f.text_field :subtitulo %>
-  </div>
-  <div class="field">
-    <%= f.label :autor %><br />
-    <%= f.text_field :autor %>
-  </div>
-  <div class="field">
-    <%= f.label :quantidade %><br />
-    <%= f.number_field :quantidade %>
-  </div>
-  <div class="field">
-    <%= f.label :prazo_entrega %><br />
-    <%= f.number_field :prazo_entrega %>
-  </div>
-  <div class="field">
-    <%= f.label :isbn %><br />
-    <%= f.text_field :isbn %>
-  </div>
-  <div class="field">
-    <%= f.label :data_lancamento %><br />
-    <%= f.date_select :data_lancamento %>
-  </div>
-  <div class="field">
-    <%= f.label :edicao %><br />
-    <%= f.number_field :edicao %>
-  </div>
-  <div class="field">
-    <%= f.label :editora %><br />
-    <%= f.text_field :editora %>
-  </div>
-  <div class="field">
-    <%= f.label :categorialivro %><br />
-    <%= f.text_field :categorialivro %>
+  <div class="form livro">
+    <div class="field">
+	  <%= label(f, :titulo, "Título") %>
+      <%= f.text_field :titulo %>
+    </div>
+    <div class="field">
+	  <%= label(f, :subtitulo, "Subtítulo") %>	
+      <%= f.text_field :subtitulo %>
+    </div>
+    <div class="field">
+      <%= f.label :autor %>
+      <%= f.text_field :autor %>
+    </div>
+    <div class="field">
+      <%= f.label :quantidade %>
+      <%= f.number_field :quantidade %>
+    </div>
+    <div class="field">
+      <%= f.label :prazo_entrega %>
+      <%= f.number_field :prazo_entrega %>
+    </div>
+    <div class="field">
+	  <%= label(f, :isbn, "ISBN") %>	
+      <%= f.text_field :isbn %>
+    </div>
+    <div class="field">
+	  <%= label(f, :data_lancamento, "Data Lançamento") %>
+      <%= f.date_select(:data_lancamento, :order => [:day, :month, :year],  :prompt => { :day => '--', :month => '--', :year => '----'}) %>
+    </div>
+    <div class="field">
+	  <%= label(f, :edicao, "Edição") %>
+      <%= f.number_field :edicao %>
+    </div>
+    <div class="field">
+      <%= f.label :editora %>
+      <%= f.collection_select(:editora_id, Editora.all, :id, :razao_social, :prompt => true)  %>
+    </div>
+    <div class="field">
+	  <%= label(f, :categorialivro, "Categoria") %>
+      <%= f.collection_select(:categorialivro_id, Categorialivro.all, :id, :descricao, :prompt => true) %>
+    </div>
   </div>
   <div class="actions">
-    <%= f.submit %>
+	  <%= f.submit 'Salvar' %>
   </div>
 <% end %>

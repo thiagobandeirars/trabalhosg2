@@ -1,9 +1,10 @@
-<h1>Listing editoras</h1>
+<h1>Lista de Editoras
+<%= link_to 'Nova editora', new_editora_path %></h1>
 
 <table>
   <tr>
-    <th>Razao social</th>
-    <th>Cnpj</th>
+    <th>Razão social</th>
+    <th>CNPJ</th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,13 +14,8 @@
   <tr>
     <td><%= editora.razao_social %></td>
     <td><%= editora.cnpj %></td>
-    <td><%= link_to 'Show', editora %></td>
-    <td><%= link_to 'Edit', edit_editora_path(editora) %></td>
-    <td><%= link_to 'Destroy', editora, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+    <td class="botoes"><%= link_to image_tag("show.png"), editora %></td>
+    <td class="botoes"><%= link_to image_tag("edit.png"), edit_editora_path(editora) %></td>
+    <td class="botoes"><%= link_to image_tag("delete.png"), editora, :confirm => 'Are you sure?', :method => :delete %></td>  </tr>
 <% end %>
 </table>
-
-<br />
-
-<%= link_to 'New Editora', new_editora_path %>

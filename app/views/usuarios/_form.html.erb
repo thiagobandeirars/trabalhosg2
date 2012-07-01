@@ -10,28 +10,33 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :nome %><br />
-    <%= f.text_field :nome %>
-  </div>
-  <div class="field">
-    <%= f.label :endereco %><br />
-    <%= f.text_field :endereco %>
-  </div>
-  <div class="field">
-    <%= f.label :telefone %><br />
-    <%= f.text_field :telefone %>
-  </div>
-  <div class="field">
-    <%= f.label :matricula %><br />
-    <%= f.number_field :matricula %>
-  </div>
-  <div class="field">
-    <%= f.label :grupo %><br />
-    <%= f.collection_select(:grupo_id, Grupo.all, :id, :descricao)  %>
+  <div class="form">
+    <div class="field">
+      <%= f.label :nome %>
+      <%= f.text_field :nome %>
+    </div>
+    <div class="field">
+      <%= f.label(:endereco, 'Endereço') %>
+      <%= f.text_field :endereco %>
+    </div>
+    <div class="field">
+      <%= f.label :telefone %>
+      <%= f.text_field :telefone %>
+    </div>
+    <div class="field">
+      <%= f.label(:matricula, 'Matrícula') %>
+      <%= f.number_field :matricula %>
+    </div>
+    <div class="field">
+      <%= f.label :senha %>
+      <%= f.password_field :senha %>
+    </div>
+    <div class="field">
+      <%= f.label :grupo %>
+      <%= f.collection_select(:grupo_id, Grupo.all, :id, :descricao, :prompt => true)  %>
+    </div>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Salvar' %>
   </div>
 <% end %>

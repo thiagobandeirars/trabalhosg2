@@ -1,17 +1,18 @@
-<h1>Listing livros</h1>
+<h1>Lista de Livros
+<%= link_to 'Novo livro', new_livro_path %></h1>
 
 <table>
   <tr>
-    <th>Titulo</th>
-    <th>Subtitulo</th>
+    <th>Título</th>
+    <th>Subtítulo</th>
     <th>Autor</th>
     <th>Quantidade</th>
     <th>Prazo entrega</th>
-    <th>Isbn</th>
-    <th>Data lancamento</th>
-    <th>Edicao</th>
+    <th>ISBN</th>
+    <th>Data lançamento</th>
+    <th>Edição</th>
     <th>Editora</th>
-    <th>Categorialivro</th>
+    <th>Categoria</th>
     <th></th>
     <th></th>
     <th></th>
@@ -27,15 +28,10 @@
     <td><%= livro.isbn %></td>
     <td><%= livro.data_lancamento %></td>
     <td><%= livro.edicao %></td>
-    <td><%= livro.editora %></td>
-    <td><%= livro.categorialivro %></td>
-    <td><%= link_to 'Show', livro %></td>
-    <td><%= link_to 'Edit', edit_livro_path(livro) %></td>
-    <td><%= link_to 'Destroy', livro, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+    <td><%= livro.editora.razao_social %></td>
+    <td><%= livro.categorialivro.descricao %></td>
+    <td class="botoes"><%= link_to image_tag("show.png"), livro %></td>
+    <td class="botoes"><%= link_to image_tag("edit.png"), edit_livro_path(livro) %></td>
+    <td class="botoes"><%= link_to image_tag("delete.png"), livro, :confirm => 'Are you sure?', :method => :delete %></td>  </tr>
 <% end %>
 </table>
-
-<br />
-
-<%= link_to 'New Livro', new_livro_path %>

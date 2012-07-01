@@ -1,10 +1,10 @@
+<h1>Detalhes da Categoria
+<%= link_to 'Editar', edit_categorialivro_path(@categorialivro) %>
+<%= link_to 'Voltar', categorialivros_path %></h1>
+
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Descricao:</b>
-  <%= @categorialivro.descricao %>
-</p>
-
-
-<%= link_to 'Edit', edit_categorialivro_path(@categorialivro) %> |
-<%= link_to 'Back', categorialivros_path %>
+<div class="field">
+	<label for="descricao">Descrição</label>
+	<div class="detail"><%= @categorialivro.descricao %></div>
+</div>

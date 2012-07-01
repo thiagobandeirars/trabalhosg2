@@ -1,4 +1,13 @@
 Trabalhosg2::Application.routes.draw do
+
+  get "login" => "sessions#new", :as => "login"
+  get "logout" => "sessions#destroy", :as => "logout"
+  get "signup" => "users#new", :as => "signup"
+
+  resources :sessions, :only => [:create]
+
+  get "home/index", :as => "index"
+
   resources :livros
 
   resources :categorialivros
@@ -58,7 +67,7 @@ Trabalhosg2::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  root :to => 'home#index'
 
   # See how all your routes lay out with "rake routes"
 

@@ -10,16 +10,17 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :razao_social %><br />
-    <%= f.text_field :razao_social %>
-  </div>
-  <div class="field">
-    <%= f.label :cnpj %><br />
-    <%= f.text_field :cnpj %>
-  </div>
+	<div class="form">
+		<div class="field">
+			<%= f.label(:razao_social,'Razão Social') %>
+			<%= f.text_field :razao_social %>
+		</div>
+		<div class="field">
+			<%= f.label :cnpj %>
+			<%= f.text_field :cnpj %>
+		</div>
+	</div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Salvar' %>
   </div>
 <% end %>

@@ -1,15 +1,16 @@
+<h1>Detalhes do Grupo
+<%= link_to 'Editar', edit_grupo_path(@grupo) %>
+<%= link_to 'Voltar', grupos_path %>
+
+</h1>
+
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Descricao:</b>
-  <%= @grupo.descricao %>
-</p>
-
-<p>
-  <b>Multa:</b>
-  <%= @grupo.multa %>
-</p>
-
-
-<%= link_to 'Edit', edit_grupo_path(@grupo) %> |
-<%= link_to 'Back', grupos_path %>
+<div class="field">
+	<label for="descricao">Descrição</label>
+	<div class="detail"><%= @grupo.descricao %></div>
+</div>
+<div class="field">
+    <label for="descricao">Multa</label>
+	<div class="detail"><%= @grupo.multa %></div>
+</div>
