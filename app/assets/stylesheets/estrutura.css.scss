@@ -1,0 +1,160 @@
+body {
+  margin:0;
+  padding:0;
+  font:12px Verdana;
+}
+a, a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.cabecalho {
+  position: relative;
+  top: 0;
+  height: 120px;
+  z-index: 1;
+  background: gray;
+;}
+.centro {
+  margin: 0 auto;
+  width: 978px;
+  padding: 5px;
+ }
+.cabecalho .centro {
+  height: 100%;
+}
+.cabecalho .centro .logo img {
+  width: 100px;
+  height: 100px;
+  float: left;
+}
+.cabecalho .centro .dados {
+  float: left;
+  padding: 20px;
+}
+.cabecalho .centro .nome {
+  font-size: 28px;
+  text-align:center;
+  font-weight: bolder;
+  vertical-align: middle;
+}
+.cabecalho .centro .usuario {
+  margin-top: 15px;
+}
+.cabecalho .centro .usuario a {
+  color: #fff;
+}
+.cabecalho .centro .logout {
+  float: right;
+  padding: 5px;
+}
+.cabecalho .centro .logout a, .cabecalho .centro .logout a:visited {
+  color: #FFF;
+}
+.barraPesquisa {
+  background: #DDD;
+  padding: 10px;
+  text-align:center;
+}
+.barraPesquisa label {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.barraPesquisa input[type="text"] {
+  border:1px solid gray;
+  height: 25px;
+  width: 60%;
+  padding-left: 5px;
+}
+.barraPesquisa .button {
+  padding: 3px;
+}
+.barraPesquisa .button:hover {
+  cursor:pointer;
+}
+.conteudo {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+.conteudo .centro {
+  min-height: 300px;
+}
+.conteudo .centro .esquerdo {
+  float: left;
+  width: 20%;      
+  clear: right;
+  height: auto;
+}
+.conteudo .centro .esquerdo .menu {
+  border-radius: 10px;
+  background: #DDD;
+  min-height: 200px;
+  padding:5px;
+}
+.conteudo .centro .direito {
+  float: right;
+  padding: 5px;
+  padding-top: 0;
+  max-width: 77%;
+}
+.informa {
+  margin-left: 5px;
+  margin-bottom: 10px;
+}
+.conteudo .centro .esquerdo a {
+  padding: 5px;
+  padding-left: 10px;
+  height: 20px;
+  display: block;
+  text-decoration: none;
+  color: #000;
+}
+.conteudo .centro .esquerdo a:hover {
+  text-decoration: underline;
+}
+.rodape {
+  height:60px;
+  background: gray;
+  color: #fff;
+  text-align: right;
+  padding-top: 10px;
+}
+.clear {
+  clear: both;
+}
+
+.livro {
+  padding-bottom: 30px;
+  border-bottom:1px solid #000;
+  height: 50px;
+  width: 750px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.livro a, .livro a:visited{
+  text-decoration:none;
+  color: #000;
+}
+.livro a:hover {
+  text-decoration: underline;
+}
+.livro .titulo {
+  font-weight: bolder;
+  font-size: 16px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+.livro .editora, .livro .autor{
+  float:left;
+  clear:left;
+  margin-bottom: 5px;
+  color: gray;
+}
+.livro .botao {
+  float: right;
+}
+.livro .botao a {
+  color: Blue;
+}
