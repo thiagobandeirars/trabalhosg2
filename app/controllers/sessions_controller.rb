@@ -8,7 +8,7 @@ class SessionsController < ActionController::Base
 
   def create
     user = Usuario.find_by_matricula(params[:matricula])
-    if user && user.authenticate(params[:matricula])
+    if user && user.authenticate(params[:senha])
       session[:usuario_id] = user.id
 
       if user.isAdministrador?
@@ -18,8 +18,8 @@ class SessionsController < ActionController::Base
       end
 
     else
- #     flash.now.alert "Usuario ou senha invalida!"
- #     render new
+       flash.now[:notice] = "Usuario ou senha invalida!"
+       render :new
     end
   end
 

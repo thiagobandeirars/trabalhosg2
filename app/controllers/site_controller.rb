@@ -11,9 +11,14 @@ class SiteController < ApplicationController
     #@livro = Livro.find_by_titulo(params[:pesquisa])
   end
 
-  def categorias    
-    @categorialivros = Categorialivro.all   
-	@livros = Livro.find_by_categorialivro_id(params[:id])
+  def categorias
+    if (params[:id])
+      @categorialivros = Categorialivro.where(:id => params[:id])
+      @livros = Livro.where(:categorialivro_id => params[:id])
+    else
+      @categorialivros = Categorialivro.all
+    end    
+	
   end
 
   def historico

@@ -1,25 +1,27 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  titulo: MyString
-  subtitulo: MyString
-  autor: MyString
+  id: 1
+  titulo: livro1
+  subtitulo: livro1
+  autor: autor1
   quantidade: 1
   prazo_entrega: 1
-  isbn: MyString
+  isbn: isbn1
   data_lancamento: 2012-06-29
   edicao: 1
-  editora: 
-  categorialivro: 
+  editora_id: 1
+  categorialivro_id: 1 
 
 two:
-  titulo: MyString
-  subtitulo: MyString
-  autor: MyString
+  id: 2
+  titulo: livro2
+  subtitulo: livro2
+  autor: autor2
   quantidade: 1
   prazo_entrega: 1
-  isbn: MyString
+  isbn: isbn2
   data_lancamento: 2012-06-29
   edicao: 1
-  editora: 
-  categorialivro: 
+  editora_id: 2
+  categorialivro_id: 2

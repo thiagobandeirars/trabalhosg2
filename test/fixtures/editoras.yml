@@ -1,9 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  razao_social: MyString
-  cnpj: MyString
+  id: 1
+  razao_social: razao1
+  cnpj: cnpj1
 
 two:
-  razao_social: MyString
-  cnpj: MyString
+  id: 2
+  razao_social: razao2
+  cnpj: cnpj2

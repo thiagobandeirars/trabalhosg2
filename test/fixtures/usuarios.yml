@@ -1,15 +1,19 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  nome: MyString
-  endereco: MyString
-  telefone: MyString
+  id: 1
+  nome: usuario1
+  endereco: endereco1
+  telefone: telefone1
   matricula: 1
-  grupo: 
+  grupo_id: 1 
+  senha: usuario1
 
 two:
-  nome: MyString
-  endereco: MyString
-  telefone: MyString
+  id: 2
+  nome: usuario2
+  endereco: usuario2
+  telefone: usuario2
   matricula: 1
-  grupo: 
+  grupo_id: 2 
+  senha: usuario2
