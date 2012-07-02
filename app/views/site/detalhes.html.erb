@@ -1,0 +1,40 @@
+<div class="detalhesLivro">
+	<div class="titulo"><%= @livro.titulo %></div>
+	<div class="linha">
+	  <div class="label">Subtitulo:</div>
+	  <div class="detail"><%= @livro.subtitulo %></div>
+	</div>
+	<div class="linha">
+	  <div class="label">Editora:</div>
+	  <div class="detail"><%= @livro.editora.razao_social %></div>
+	</div>
+	<div class="linha">
+	  <div class="label">Categoria:</div>
+	  <div class="detail"><%= @livro.categorialivro.descricao %></div>
+	</div>
+	<div class="linha">
+	  <div class="label">Autor:</div>
+	  <div class="detail"><%= @livro.autor %></div>
+	</div>
+	<div class="linha">
+	  <div class="label">Quantidade:</div>
+	  <div class="detail"><%= @livro.prazo_entrega %></div>
+	</div>
+	<div class="linha">
+	  <div class="label">ISBN:</div>
+	  <div class="detail"><%= @livro.isbn %></div>
+	</div>
+	<div class="linha">
+	  <div class="label">Data Lancamento:</div>
+	  <div class="detail"><%= @livro.data_lancamento %></div>
+	</div>
+	<div class="linha">
+	  <div class="label">Edicao:</div>
+	  <div class="detail"><%= @livro.edicao %></div>
+	</div>
+	
+	<div class="locacao">
+		<%= submit_tag "Efetuar Locacao" %>
+	</div>
+</div>
+<div class="clear" />
