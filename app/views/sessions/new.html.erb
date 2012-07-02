@@ -24,6 +24,10 @@
     <div class="login-button">
       <%= image_submit_tag("login-btn.png") %>
     </div>
+    <% flash.each do |name, msg| %>
+      <%= content_tag :div, msg, :class => 'mensagem', :id => "flash#{name}" %>
+    <% end %>
+
   </div>
   <% end %>
 </body>
