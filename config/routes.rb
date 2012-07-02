@@ -1,5 +1,15 @@
 Trabalhosg2::Application.routes.draw do
 
+  get "site/index", :as => 'site'
+  get "site/categorias", :as => 'pesquisaCategoria'
+  get "site/historico", :as => 'historico'
+  
+  match 'site/categorias/:id', :to => 'site#categorias', :as => 'pesquisaCategoria', :via => 'get'	
+  match 'site/detalhes/:id', :to => 'site#detalhes', :as => 'detalhesLivro', :via => 'get'	
+  match 'site/pesquisa/:pesquisa', :to => 'site#pesquisa', :as => 'pesquisa', :via => 'get'
+	
+  resources :site
+
   get "login" => "sessions#new", :as => "login"
   get "logout" => "sessions#destroy", :as => "logout"
   get "signup" => "users#new", :as => "signup"
