@@ -14,7 +14,7 @@ class SessionsController < ActionController::Base
       if user.isAdministrador?
         redirect_to root_url, :notice => "Administrador!"
       else
-        redirect_to root_url, :notice => "Logado!"
+        redirect_to site_url, :notice => "Logado!"
       end
 
     else
