@@ -27,6 +27,7 @@ a:hover {
 .cabecalho .centro .logo img {
   width: 100px;
   height: 100px;
+  margin-top: 5px;
   float: left;
 }
 .cabecalho .centro .dados {
@@ -38,6 +39,10 @@ a:hover {
   text-align:center;
   font-weight: bolder;
   vertical-align: middle;
+}
+.cabecalho .centro .nome a, .cabecalho .centro .nome a:visited, .cabecalho .centro .nome a:hover{
+  text-decoration: none;
+  color: #000;
 }
 .cabecalho .centro .usuario {
   margin-top: 15px;
@@ -157,4 +162,36 @@ a:hover {
 }
 .livro .botao a {
   color: Blue;
+}
+
+/* PAGINA DE DETALHES */
+.detalhesLivro {
+	font-size: 12px;
+	color: gray;
+	text-align: left;
+	width: 100%;
+	width: 750px;
+}
+.detalhesLivro .titulo {
+	font-weight: bolder;
+	font-size:18px;
+	margin-bottom:20px;
+	color:#000;
+}
+.detalhesLivro .linha {
+	clear: both;	
+	border-bottom: 1px dotted gray;
+}
+.detalhesLivro .linha div {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	float:left;
+}
+.detalhesLivro .linha .label {
+	width: 150px;
+}
+.detalhesLivro .locacao {
+	clear: both;
+	margin-top: 50px;
+	text-align: right;
 }
