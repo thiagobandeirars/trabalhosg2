@@ -1,24 +1,27 @@
+<!DOCTYPE html>
 <html>
 <head>
-  <link href="site.css" type="text/css" rel="stylesheet" />
-</head>
+  <%= stylesheet_link_tag "estrutura", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  </head>
 <body>
 
   <div class="cabecalho">
     <div class="centro">
       <div class="logout">
-        <a href="#">Para sair do sistema clique aqui</a>
+		<%= link_to "Sair", logout_path %>
       </div>
       <div class="logo">
-        <img src="" />
+		<%= image_tag "logo.png" %>
       </div>
       <div class="dados">
         <div class="nome">
-          Biblioteca Virtual
+		  <%= link_to "Biblioteca Virtual", :action=>"index" %>
         </div>
         <div class="usuario">
-          Seja bem-vindo Fulano<br />
-          <a href="#">Locações Atuais</a> | <a href="#">Histórico</a>
+          Seja bem-vindo <%= @current_user.nome %><br />
+		  <%= link_to 'Histórico', historico_path %>
         </div>
       </div>
     </div>
@@ -27,8 +30,8 @@
   <div class="barraPesquisa">
     <div class="centro">
       <label for="pesquisa">Pesquise pelo Título:</label>
-      <input type="text" id="pesquisa" placeholder="Nome do livro" />
-      <input type="button" class="button" value="Efetuar Pesquisa" />
+	  <%= text_field(:livro, :titulo, :placeholder=>'Nome do livro') %>
+	  <%= link_to "Efetuar Pesquisa", pesquisa_path(1) %>
     </div>
   </div>
 
@@ -41,54 +44,14 @@
         </div>
 
         <div class="menu">
-          <a href="#">Administração</a>
-          <a href="#">Administração</a>
-          <a href="#">Administração</a>
-          <a href="#">Administração</a>
-          <a href="#">Administração</a>
-          <a href="#">Administração</a>
-          <a href="#">Administração</a>
+		  <% @categorialivros.each do |categorialivro| %>
+			<%= link_to categorialivro.descricao, pesquisaCategoria_path(categorialivro.id) %>
+		  <% end %>
         </div>
-
-
-      </div>
+	  </div>
       <div class="direito">
-        <div class="livro">
-          <a href="#">
-            <div class="titulo">Livro 1</div>
-          </a>
-          <div class="editora">Novatec</div>
-          <div class="autor">Fulano</div>
-          <div class="botao"><a href="#">Detalhes</a></div>          
-        </div>
-        <div class="livro">
-          <div class="titulo">Livro 1</div>
-          <div class="editora">Novatec</div>
-          <div class="autor">Fulano</div>
-          <div class="botao"><a href="#">Detalhes</a></div>
-        </div>
-        <div class="livro">
-          <div class="titulo">Livro 1</div>
-          <div class="editora">Novatec</div>
-          <div class="autor">Fulano</div>
-          <div class="botao"><a href="#">Detalhes</a></div>
-        </div>
-        <div class="livro">
-          <div class="titulo">Livro 1</div>
-          <div class="editora">Novatec</div>
-          <div class="autor">Fulano</div>
-          <div class="botao"><a href="#">Detalhes</a></div>
-        </div>
-        <div class="livro">
-          <div class="titulo">Livro 1</div>
-          <div class="editora">Novatec</div>
-          <div class="autor">Fulano</div>
-          <div class="botao"><a href="#">Detalhes</a></div>
-        </div>
-
+		<%= yield %>
       </div>
-
-
     </div>
   </div>
 
