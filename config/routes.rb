@@ -6,7 +6,7 @@ Trabalhosg2::Application.routes.draw do
   get "site/categorias", :as => 'pesquisaCategoria'
   get "site/historico", :as => 'historico'
   
-  match 'site/categorias/:id', :to => 'site#categorias', :as => 'pesquisaCategoria', :via => 'get'	
+  match 'site/categorias/:id/livros', :to => 'site#categorias', :as => 'pesquisaCategoria', :via => 'get'	
   match 'site/detalhes/:id', :to => 'site#detalhes', :as => 'detalhesLivro', :via => 'get'	
   match 'site/pesquisa/:pesquisa', :to => 'site#pesquisa', :as => 'pesquisa', :via => 'get'
 	

@@ -11,6 +11,7 @@
 # It's strongly recommended to check this file into your version control system.
 
 ActiveRecord::Schema.define(:version => 20120702230159) do
+#ActiveRecord::Schema.define(:version => 20120701182451) do
 
   create_table "categorialivros", :force => true do |t|
     t.string   "descricao"
