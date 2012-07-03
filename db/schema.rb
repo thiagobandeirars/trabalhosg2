@@ -10,12 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(:version => 20120630152337) do
-=======
 ActiveRecord::Schema.define(:version => 20120702230159) do
-#ActiveRecord::Schema.define(:version => 20120701182451) do
->>>>>>> ef8b34cc122c663b62ed6b8ad8f685c10bfe0d13
 
   create_table "categorialivros", :force => true do |t|
     t.string   "descricao"
