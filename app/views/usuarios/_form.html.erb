@@ -32,6 +32,10 @@
       <%= f.password_field :senha %>
     </div>
     <div class="field">
+      <%= f.label :senha_confirmation  %>
+      <%= f.password_field :senha_confirmation %>
+    </div>
+    <div class="field">
       <%= f.label :grupo %>
       <%= f.collection_select(:grupo_id, Grupo.all, :id, :descricao, :prompt => true)  %>
     </div>

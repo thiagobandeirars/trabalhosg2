@@ -1,0 +1,2 @@
+module LocacaosHelper
+end

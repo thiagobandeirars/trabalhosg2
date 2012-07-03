@@ -10,11 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(:version => 20120630152337) do
-=======
-ActiveRecord::Schema.define(:version => 20120701182451) do
->>>>>>> 2bd78d9b846bfced7113034c66f2916151891576
+ActiveRecord::Schema.define(:version => 20120702230159) do
 
   create_table "categorialivros", :force => true do |t|
     t.string   "descricao"
@@ -53,6 +49,20 @@ ActiveRecord::Schema.define(:version => 20120701182451) do
 
   add_index "livros", ["categorialivro_id"], :name => "index_livros_on_categorialivro_id"
   add_index "livros", ["editora_id"], :name => "index_livros_on_editora_id"
+
+  create_table "locacaos", :force => true do |t|
+    t.date     "data_locacao"
+    t.date     "data_devolucao"
+    t.date     "data_prevista_dev"
+    t.float    "multa"
+    t.integer  "usuario_id"
+    t.integer  "livro_id"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+  end
+
+  add_index "locacaos", ["livro_id"], :name => "index_locacaos_on_livro_id"
+  add_index "locacaos", ["usuario_id"], :name => "index_locacaos_on_usuario_id"
 
   create_table "usuarios", :force => true do |t|
     t.string   "nome"

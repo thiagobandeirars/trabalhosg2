@@ -1,5 +1,7 @@
 Trabalhosg2::Application.routes.draw do
 
+  resources :locacaos
+
   get "site/index", :as => 'site'
   get "site/categorias", :as => 'pesquisaCategoria'
   get "site/historico", :as => 'historico'
