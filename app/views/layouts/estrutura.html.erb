@@ -30,8 +30,11 @@
   <div class="barraPesquisa">
     <div class="centro">
       <label for="pesquisa">Pesquise pelo Título:</label>
-	  <%= text_field(:livro, :titulo, :placeholder=>'Nome do livro') %>
-	  <%= link_to "Efetuar Pesquisa", pesquisa_path(1) %>
+		<%= link_to 'Exemplo Pesquisa', pesquisa_path(1) %>
+		<%= form_tag('/site/pesquisa/1/livro') do %>
+			<%= text_field_tag :pesquisa, params[:pesquisa] %>
+			<%= submit_tag 'Efetuar pesquisa' %>
+		<% end %>
     </div>
   </div>
 
@@ -63,6 +66,5 @@
       Todos os direitos reservados.
     </div>
   </div>
-
 </body>
 </html>

@@ -1,9 +1,14 @@
-<h2>
+Livros da Categoria: <%= @categoria.descricao %>
 
-        <div class="menu">
-		  <% @livros.each do |livro| %>
-			<%= livro.titulo %>
-		  <% end %>
-        </div>
+<% @livros.each do |livro| %>
 
-</h2>
+<div class="livro">
+  <div class="titulo"><%= livro.titulo %></div>
+  <div class="editora"><%= livro.editora.razao_social %></div>
+  <div class="autor"><%= livro.autor %></div>
+  <div class="botao">
+	<%= link_to "+ Detalhes", detalhesLivro_path(livro.id) %>
+  </div>
+</div>
+
+<% end %>

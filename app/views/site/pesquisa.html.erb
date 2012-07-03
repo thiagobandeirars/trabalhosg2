@@ -1,5 +1,14 @@
-<h2>
-Como faco para pegar o valor do campo digitado e passar por parametro?
-<br><br>
-O codigo HTML eh o mesmo do app/views/site/index.html.erb
-</h2>
+Pesquisado por: <%= params[:pesquisa] %>
+
+<% @livros.each do |livro| %>
+
+<div class="livro">
+  <div class="titulo"><%= livro.titulo %></div>
+  <div class="editora"><%= livro.editora.razao_social %></div>
+  <div class="autor"><%= livro.autor %></div>
+  <div class="botao">
+	<%= link_to "+ Detalhes", detalhesLivro_path(livro.id) %>
+  </div>
+</div>
+
+<% end %>
