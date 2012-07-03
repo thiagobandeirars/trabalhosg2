@@ -3,15 +3,14 @@ Trabalhosg2::Application.routes.draw do
   resources :locacaos
 
   get "site/index", :as => 'site'
-  get "site/categorias", :as => 'pesquisaCategoria'
+  #get "site/categorias", :as => 'pesquisaCategoria'
+  get "site/pequisa", :as => 'pesquisa'
   get "site/historico", :as => 'historico'
   
   match 'site/categorias/:id/livros', :to => 'site#categorias', :as => 'pesquisaCategoria', :via => 'get'	
-  match 'site/detalhes/:id', :to => 'site#detalhes', :as => 'detalhesLivro', :via => 'get'	
-  match 'site/pesquisa/:pesquisa', :to => 'site#pesquisa', :as => 'pesquisa', :via => 'get'
+  match 'site/detalhes/:id/livro', :to => 'site#detalhes', :as => 'detalhesLivro', :via => 'get'	
+  match 'site/pesquisa/:pesquisa/livro', :to => 'site#pesquisa', :as => 'pesquisa', :via => 'post'
 	
-  resources :site
-
   get "login" => "sessions#new", :as => "login"
   get "logout" => "sessions#destroy", :as => "logout"
   get "signup" => "users#new", :as => "signup"
@@ -19,6 +18,8 @@ Trabalhosg2::Application.routes.draw do
   resources :sessions, :only => [:create]
 
   get "home/index", :as => "index"
+
+  resources :site
 
   resources :livros
 

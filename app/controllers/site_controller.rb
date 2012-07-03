@@ -8,15 +8,15 @@ class SiteController < ApplicationController
 
   def pesquisa
     @categorialivros = Categorialivro.all   
-    #@livro = Livro.find_by_titulo(params[:pesquisa])
+ 	q= "%#{params[:pesquisa]}%"
+	@livros = Livro.where("titulo like ?",q)
   end
 
   def categorias
+	@categorialivros = Categorialivro.all
     if (params[:id])
-      @categorialivros = Categorialivro.where(:id => params[:id])
+      @categoria = Categorialivro.find(params[:id])
       @livros = Livro.where(:categorialivro_id => params[:id])
-    else
-      @categorialivros = Categorialivro.all
     end    
 	
   end
