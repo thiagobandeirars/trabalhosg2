@@ -18,8 +18,8 @@ class SessionsController < ActionController::Base
       end
 
     else
-       flash.now[:notice] = "Usuario ou senha invalida!"
-       render :new
+      flash[:erro] = "Usuario ou senha invalida!"
+      redirect_to login_url
     end
   end
 

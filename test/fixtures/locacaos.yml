@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  data_locacao: 2012-07-02
+  data_devolucao: 2012-07-02
+  data_prevista_dev: 2012-07-02
+  multa: 1.5
+  usuario: 
+  livro: 
+
+two:
+  data_locacao: 2012-07-02
+  data_devolucao: 2012-07-02
+  data_prevista_dev: 2012-07-02
+  multa: 1.5
+  usuario: 
+  livro: 

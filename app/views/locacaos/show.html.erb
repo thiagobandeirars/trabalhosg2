@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Data locacao:</b>
+  <%= @locacao.data_locacao %>
+</p>
+
+<p>
+  <b>Data devolucao:</b>
+  <%= @locacao.data_devolucao %>
+</p>
+
+<p>
+  <b>Data prevista dev:</b>
+  <%= @locacao.data_prevista_dev %>
+</p>
+
+<p>
+  <b>Multa:</b>
+  <%= @locacao.multa %>
+</p>
+
+<p>
+  <b>Usuario:</b>
+  <%= @locacao.usuario %>
+</p>
+
+<p>
+  <b>Livro:</b>
+  <%= @locacao.livro %>
+</p>
+
+
+<%= link_to 'Edit', edit_locacao_path(@locacao) %> |
+<%= link_to 'Back', locacaos_path %>

@@ -1,0 +1,43 @@
+<%= form_for(@locacao) do |f| %>
+  <% if @locacao.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@locacao.errors.count, "error") %> prohibited this locacao from being saved:</h2>
+
+      <ul>
+      <% @locacao.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form livro">
+    <div class="field">
+      <%= f.label :livro %>
+      <%= f.collection_select(:livro_id, Livro.all, :id, :titulo, :prompt => true)  %>
+    </div>
+    <div class="field">
+      <%= f.label :usuario %>
+      <%= f.collection_select(:usuario_id, Usuario.all, :id, :nome, :prompt => true)  %>
+    </div>
+    <div class="field">
+      <%= f.label :data_locacao %>
+      <%= f.date_select(:data_locacao, :order => [:day, :month, :year],  :prompt => { :day => '--', :month => '--', :year => '----'}) %>
+    </div>
+    <div class="field">
+      <%= f.label :data_devolucao %>
+      <%= f.date_select(:data_devolucao, :order => [:day, :month, :year],  :prompt => { :day => '--', :month => '--', :year => '----'}) %>
+    </div>
+    <div class="field">
+      <%= f.label :data_prevista_dev %>
+      <%= f.date_select(:data_prevista_dev, :order => [:day, :month, :year],  :prompt => { :day => '--', :month => '--', :year => '----'}) %>
+    </div>
+    <div class="field">
+      <%= f.label :multa %>
+      <%= f.text_field :multa, :size => 10 %>
+    </div>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Salvar' %>
+  </div>
+<% end %>
