@@ -1,9 +1,13 @@
 class Usuario < ActiveRecord::Base
   belongs_to :grupo
-  attr_accessible :grupo_id, :endereco, :matricula, :nome, :telefone, :senha
+  has_many :locacao
+  attr_accessible :grupo_id, :endereco, :matricula, :nome, :telefone, :senha, :senha_confirmation
 
   validates :endereco, :matricula, :nome, :telefone, :grupo, :senha, :presence =>true
   validates :matricula, :uniqueness => true
+  validates :senha, :presence =>true,
+                    :length => { :minimum => 5, :maximum => 10 }
+  validates_confirmation_of :senha
 
 
   def authenticate senha
