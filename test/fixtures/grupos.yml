@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  id: 2
-  descricao: grupo2
+  id: 1
+  descricao: grupo1
   multa: 1.5
 
 two:
-  id: 3
-  descricao: grupo3
+  id: 2
+  descricao: grupo2
   multa: 1.5
