@@ -12,7 +12,8 @@ class Livro < ActiveRecord::Base
   validates_numericality_of :quantidade, :only_integer => true
   
   # Valida no Formato 000-00-000-0000-0
-  validates_format_of :isbn, :with => /\d{3,3}[-]\d{2,2}[-]\d{3,3}[-]\d{4,4}[-]\d$/
+  validates_format_of :isbn, :with => /\d{3,3}[-]\d{2,2}[-]\d{3,3}[-]\d{4,4}[-]\d$/,
+  	:message => "inválido. Utilize o formato: 000-00-000-0000-0"
 
 	
 end

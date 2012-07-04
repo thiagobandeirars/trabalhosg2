@@ -11,7 +11,7 @@ class Usuario < ActiveRecord::Base
   validates_numericality_of :matricula, :only_integer => true
 	
 
-  validates_length_of :matricula, :is => 9
+  validates_length_of :matricula, :is => 9, :message => "inválida. A mátricula deve possuir 9 digítos númericos!"
 
   def authenticate senha
     if self && self.senha == senha
