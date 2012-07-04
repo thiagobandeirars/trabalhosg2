@@ -30,10 +30,11 @@
   <div class="barraPesquisa">
     <div class="centro">
       <label for="pesquisa">Pesquise pelo Título:</label>
-		<%= link_to 'Exemplo Pesquisa', pesquisa_path(1) %>
-		<%= form_tag('/site/pesquisa/1/livro') do %>
+		<%= # link_to 'Exemplo Pesquisa', pesquisa_path(1) 
+		%>
+		<%= form_tag pesquisa_path, :method => 'get' do %>
 			<%= text_field_tag :pesquisa, params[:pesquisa] %>
-			<%= submit_tag 'Efetuar pesquisa' %>
+			<%= submit_tag 'Efetuar pesquisa', :name => nil %>
 		<% end %>
     </div>
   </div>
