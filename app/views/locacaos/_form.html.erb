@@ -17,20 +17,24 @@
       <%= f.collection_select(:livro_id, Livro.all, :id, :titulo, :prompt => true)  %>
     </div>
     <div class="field">
-      <%= f.label :usuario %>
+      <%= f.label :usuario, "Usuário" %>
       <%= f.collection_select(:usuario_id, Usuario.all, :id, :nome, :prompt => true)  %>
     </div>
     <div class="field">
-      <%= f.label :data_locacao %>
-      <%= f.date_select(:data_locacao, :order => [:day, :month, :year],  :prompt => { :day => '--', :month => '--', :year => '----'}) %>
+      <%= f.label :data_locacao, "Data Locação" %>
+      <% if params[:id] %>
+        <%= f.text_field :data_locacao, :disabled => true, :size => 15 %>
+      <% else %>
+	<%= f.text_field :data_locacao, :disabled => true, :value => Date.today, :size => 15 %>
+      <% end %>
     </div>
     <div class="field">
-      <%= f.label :data_devolucao %>
-      <%= f.date_select(:data_devolucao, :order => [:day, :month, :year],  :prompt => { :day => '--', :month => '--', :year => '----'}) %>
-    </div>
-    <div class="field">
-      <%= f.label :data_prevista_dev %>
+      <%= f.label :data_prevista_dev, "Data Previsão" %>
       <%= f.date_select(:data_prevista_dev, :order => [:day, :month, :year],  :prompt => { :day => '--', :month => '--', :year => '----'}) %>
+    </div>
+    <div class="field">
+      <%= f.label :data_devolucao, "Data Devolução" %>
+      <%= f.date_select(:data_devolucao, :order => [:day, :month, :year],  :prompt => { :day => '--', :month => '--', :year => '----'}) %>
     </div>
     <div class="field">
       <%= f.label :multa %>

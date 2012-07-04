@@ -16,15 +16,15 @@
 
 <% @locacaos.each do |locacao| %>
   <tr>
-    <td><%= locacao.livro %></td>    
-    <td><%= locacao.usuario %></td>
+    <td><%= locacao.livro.titulo %></td>    
+    <td><%= locacao.usuario.nome %></td>
     <td><%= locacao.data_locacao %></td>
     <td><%= locacao.data_devolucao %></td>
     <td><%= locacao.data_prevista_dev %></td>
     <td><%= locacao.multa %></td>    
-    <td class="botoes"><%= link_to image_tag("show.png"), locacao %></td>
-    <td class="botoes"><%= link_to image_tag("edit.png"), edit_locacao_path(locacao) %></td>
-    <td class="botoes"><%= link_to image_tag("delete.png"), locacao, :confirm => 'Tem certeza que deseja excluir?', :method => :delete %></td>
+    <td class="botoes"><%= link_to image_tag("show.png", :alt=>"Exibir", :title=>"Exibir"), locacao %></td>
+    <td class="botoes"><%= link_to image_tag("edit.png", :alt=>"Editar",:title=>"Editar"), edit_locacao_path(locacao) %></td>
+    <td class="botoes"><%= link_to image_tag("delete.png",:alt=>"Excluir",:title=>"Excluir"), locacao, :confirm => 'Tem certeza que deseja excluir?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

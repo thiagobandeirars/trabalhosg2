@@ -1,35 +1,42 @@
+<h1>Detalhes da Locação
+<%= link_to 'Editar', edit_locacao_path(@locacao) %>
+<%= link_to 'Voltar', locacaos_path %>
+</h1>
+
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Data locacao:</b>
-  <%= @locacao.data_locacao %>
-</p>
+<div class="field">
+  <label for="livro">Livro</label>
+  <div class="detail"><%= @locacao.livro.titulo %></div>
+</div>
 
-<p>
-  <b>Data devolucao:</b>
-  <%= @locacao.data_devolucao %>
-</p>
+<div class="field">
+  <label for="livro">Usuário</label>
+  <div class="detail"><%= @locacao.usuario.nome %></div>
+</div>
 
-<p>
-  <b>Data prevista dev:</b>
-  <%= @locacao.data_prevista_dev %>
-</p>
-
-<p>
-  <b>Multa:</b>
-  <%= @locacao.multa %>
-</p>
-
-<p>
-  <b>Usuario:</b>
-  <%= @locacao.usuario %>
-</p>
-
-<p>
-  <b>Livro:</b>
-  <%= @locacao.livro %>
-</p>
+<div class="field">
+  <label for="livro">Locação</label>
+  <div class="detail"><%= @locacao.data_locacao.strftime("%d-%m-%Y") %></div>
+</div>
 
 
-<%= link_to 'Edit', edit_locacao_path(@locacao) %> |
-<%= link_to 'Back', locacaos_path %>
+<div class="field">
+  <label for="livro">Previsão</label>
+  <div class="detail"><%= @locacao.data_prevista_dev.strftime("%d-%m-%Y") %></div>
+</div>
+
+
+<div class="field">
+  <label for="livro">Devolução</label>
+  <div class="detail">
+    <%= @locacao.data_devolucao.strftime("%d-%m-%Y") if @locacao.data_devolucao %>
+  </div>
+</div>
+
+
+<div class="field">
+  <label for="livro">Multa</label>
+  <div class="detail"><%= @locacao.multa %></div>
+</div>
+
