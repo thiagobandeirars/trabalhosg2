@@ -63,8 +63,8 @@ a:hover {
   text-align:center;
 }
 .barraPesquisa label {
-  padding-left: 20px;
-  padding-right: 20px;
+  text-align:right;
+  padding-right: 5px;
 }
 .barraPesquisa input[type="text"] {
   border:1px solid gray;
@@ -73,7 +73,9 @@ a:hover {
   padding-left: 5px;
 }
 .barraPesquisa .button {
-  padding: 3px;
+  padding-left: 4px;
+  padding-right: 4px;
+  height: 30px;
 }
 .barraPesquisa .button:hover {
   cursor:pointer;
@@ -103,6 +105,7 @@ a:hover {
   padding: 5px;
   padding-top: 0;
   max-width: 77%;
+  width: 750px;
 }
 .informa {
   margin-left: 5px;
@@ -195,3 +198,24 @@ a:hover {
 	margin-top: 50px;
 	text-align: right;
 }
+.detalhesLivro .locacao a {
+	padding: 5px;
+	border: 1px solid gray;
+	background: #ddd;
+	text-decoration: none;
+	color: #000;
+}
+.detalhesLivro .locacao a:visited {
+	text-decoration: none;
+}
+/* MENSAGENS */
+.messages.notice {
+	color: green;
+	font-weight: bolder;
+}
+.messages.errors {
+	color: red;
+	font-weight: bolder;
+}
+
+
