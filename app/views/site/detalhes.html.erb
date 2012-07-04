@@ -26,7 +26,7 @@
 	</div>
 	<div class="linha">
 	  <div class="label">Data Lancamento:</div>
-	  <div class="detail"><%= @livro.data_lancamento %></div>
+	  <div class="detail"><%= @livro.data_lancamento.strftime("%d-%m-%Y") %></div>
 	</div>
 	<div class="linha">
 	  <div class="label">Edicao:</div>
@@ -34,7 +34,7 @@
 	</div>
 	
 	<div class="locacao">
-		<a href="/site/livro/<%= @livro.id %>/locacao">Locação</a>
+		<a href="/site/livro/<%= @livro.id %>/locacao">Efetuar Locação</a>
 	</div>
 </div>
-<div class="clear" />
+<div class="clear"></div>
