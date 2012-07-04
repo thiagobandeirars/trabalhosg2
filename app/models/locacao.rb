@@ -5,4 +5,6 @@ class Locacao < ActiveRecord::Base
 
   validates :data_locacao, :data_prevista_dev, :multa, :usuario_id, :livro_id, :presence => true
 
+  # Valida no Formato 00.00
+  validates_format_of :multa, :with => /^[0-9][0-9]?(\.[0-9][0-9]?)$/
 end

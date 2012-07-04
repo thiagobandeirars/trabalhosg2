@@ -8,7 +8,10 @@ class Usuario < ActiveRecord::Base
   validates :senha, :presence =>true,
                     :length => { :minimum => 5, :maximum => 10 }
   validates_confirmation_of :senha
+  validates_numericality_of :matricula, :only_integer => true
+	
 
+  validates_length_of :matricula, :is => 9
 
   def authenticate senha
     if self && self.senha == senha

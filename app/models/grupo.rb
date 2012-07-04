@@ -5,5 +5,11 @@ class Grupo < ActiveRecord::Base
   
   validates :descricao, :presence => true,  :length => { :minimum => 5 }
   validates :descricao, :uniqueness => true
+  
+  #Valida no Formato 00.00
+  validates_format_of :multa, :with => /^[0-9][0-9]?(\.[0-9][0-9]?)$/
 
 end
+
+# 
+#
