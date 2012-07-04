@@ -6,11 +6,7 @@
     <th>Título</th>
     <th>Subtítulo</th>
     <th>Autor</th>
-    <th>Quantidade</th>
-    <th>Prazo entrega</th>
-    <th>ISBN</th>
-    <th>Data lançamento</th>
-    <th>Edição</th>
+    <th width="130px">ISBN</th>
     <th>Editora</th>
     <th>Categoria</th>
     <th></th>
@@ -23,11 +19,7 @@
     <td><%= livro.titulo %></td>
     <td><%= livro.subtitulo %></td>
     <td><%= livro.autor %></td>
-    <td><%= livro.quantidade %></td>
-    <td><%= livro.prazo_entrega %></td>
     <td><%= livro.isbn %></td>
-    <td><%= livro.data_lancamento %></td>
-    <td><%= livro.edicao %></td>
     <td><%= livro.editora.razao_social %></td>
     <td><%= livro.categorialivro.descricao %></td>
     <td class="botoes"><%= link_to image_tag("show.png"), livro %></td>
