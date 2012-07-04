@@ -21,7 +21,6 @@
         </div>
         <div class="usuario">
           Seja bem-vindo <%= @current_user.nome %><br />
-		  <%= link_to 'Histórico', historico_path %>
         </div>
       </div>
     </div>
@@ -29,13 +28,11 @@
 
   <div class="barraPesquisa">
     <div class="centro">
-      <label for="pesquisa">Pesquise pelo Título:</label>
-		<%= # link_to 'Exemplo Pesquisa', pesquisa_path(1) 
-		%>
-		<%= form_tag pesquisa_path, :method => 'get' do %>
-			<%= text_field_tag :pesquisa, params[:pesquisa] %>
-			<%= submit_tag 'Efetuar pesquisa', :name => nil %>
-		<% end %>
+	<%= form_tag pesquisa_path, :method => 'get' do %>
+	  <%= label_tag :pesquisa, 'Pesquise por Título:', :class => 'pesquisa' %>
+	  <%= text_field_tag :pesquisa, params[:pesquisa], :placeholder => 'Nome do Livro' %>
+	  <%= submit_tag 'Efetuar pesquisa', :name => nil, :class => 'button' %>
+	<% end %>
     </div>
   </div>
 

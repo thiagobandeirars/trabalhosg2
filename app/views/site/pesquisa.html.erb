@@ -1,6 +1,6 @@
 Pesquisado por: <%= params[:pesquisa] %>
 
-<% if @livros %>
+<% if @livros.any? %>
     <% @livros.each do |livro| %>
 
     <div class="livro">
@@ -13,4 +13,6 @@ Pesquisado por: <%= params[:pesquisa] %>
     </div>
 
     <% end %>
+<% else %>
+  <p>Nenhum registro encontrado</p>
 <% end %>
